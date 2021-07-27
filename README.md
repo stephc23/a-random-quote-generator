@@ -1,2 +1,2 @@
-# techdegree-project-1
- My first Treehouse Techdegree project
+# a-random-quote-generator
+ Treehouse Techdegree Project 1
