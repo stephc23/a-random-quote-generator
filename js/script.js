@@ -43,14 +43,14 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
-
+const getRandomQuote = () => {
+  let randomNumber = Math.floor(Math.random() * quotes.length);
+  return quotes[randomNumber];
+};
 
 /***
  * `printQuote` function
 ***/
-
-
 
 /***
  * click event listener for the print quote button
