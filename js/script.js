@@ -3,13 +3,7 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
+// The `quotes` array contains quote objects with quote and source properties and optional citation, year, and tags properties.
 const quotes = [
 {
   quote: 'Yet what is any ocean but a multitude of drops?',
@@ -45,18 +39,16 @@ const quotes = [
 }
 ];
 
-//Gets a random number
+// The `getRandomNumber` function returns a random number between a lower number and a higher number.
 const getRandomNumber = (lower, upper) => Math.floor(Math.random() * (upper - lower + 1)) + lower;
 
-/***
- * `getRandomQuote` function
-***/
+// The `getRandomQuote` function returns a random quote object from the `quotes` array.
 const getRandomQuote = () => {
   let randomIndex = getRandomNumber(0, quotes.length - 1);
   return quotes[randomIndex];
 };
 
-//Gets a random set of RGB values
+// The `getRandomRGB` function returns an array of three random numbers, each between 0 and 255.
 const getRandomRGB = () => {
   let rgbValues = [];
   for (let i = 0; i < 3; i++) {
@@ -65,9 +57,7 @@ const getRandomRGB = () => {
   return rgbValues;
 };
 
-/***
- * `printQuote` function
-***/
+// The `printQuote` function updates the HTML with a random quote, changes the background to a random color, and returns the updated HTML string.
 const printQuote = () => {
   let randomQuote = getRandomQuote();
   let html = `
@@ -92,11 +82,8 @@ const printQuote = () => {
   return html;
 };
 
-setInterval(printQuote, 4000);
+//Call the `printQuote` function every 8 seconds
+setInterval(printQuote, 8000);
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-
+//Call the `printQuote` function whenever the `Show another quote` button is clicked (code already provided)
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
