@@ -115,6 +115,11 @@ h1 {
   font-style: normal;
 }
 
+.tags {
+  margin-right: 5em;
+  text-align: right;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 25px;
