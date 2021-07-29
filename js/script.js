@@ -85,5 +85,5 @@ const printQuote = () => {
 // Call the `printQuote` function every 8 seconds
 setInterval(printQuote, 8000);
 
-// Call the `printQuote` function whenever the `Show another quote` button is clicked (code already provided)
+// Call the `printQuote` function when the `Show another quote` button is clicked (code already provided)
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
