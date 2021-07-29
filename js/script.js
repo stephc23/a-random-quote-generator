@@ -59,21 +59,21 @@ const getRandomRGB = () => {
 
 // The `printQuote` function updates the HTML with a random quote, changes the background to a random color, and returns the updated HTML string.
 const printQuote = () => {
-  let randomQuote = getRandomQuote();
+  let quoteObject = getRandomQuote();
   let html = `
-    <p class="quote">${randomQuote.quote}</p>
-    <p class="source">${randomQuote.source}`;
+    <p class="quote">${quoteObject.quote}</p>
+    <p class="source">${quoteObject.source}`;
 
-  if (randomQuote.hasOwnProperty('citation')) {
-    html += `<span class="citation">${randomQuote.citation}</span>`;
+  if (quoteObject.hasOwnProperty('citation')) {
+    html += `<span class="citation">${quoteObject.citation}</span>`;
   }
 
-  if (randomQuote.hasOwnProperty('year')) {
-    html += `<span class="year">${randomQuote.year}</span>`;
+  if (quoteObject.hasOwnProperty('year')) {
+    html += `<span class="year">${quoteObject.year}</span>`;
   }
 
-  if (randomQuote.hasOwnProperty('tags')) {
-    html += `<div class="tags">${randomQuote.tags.join(', ')}</div>`;
+  if (quoteObject.hasOwnProperty('tags')) {
+    html += `<div class="tags">${quoteObject.tags.join(', ')}</div>`;
   }
 
   html += `</p>`;
