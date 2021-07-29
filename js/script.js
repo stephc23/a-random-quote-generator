@@ -45,12 +45,24 @@ const quotes = [
 }
 ];
 
+//Gets a random number
+const getRandomNumber = (lower, upper) => Math.floor(Math.random() * (upper - lower + 1)) + lower;
+
 /***
  * `getRandomQuote` function
 ***/
 const getRandomQuote = () => {
-  let randomNumber = Math.floor(Math.random() * quotes.length);
-  return quotes[randomNumber];
+  let randomIndex = getRandomNumber(0, quotes.length - 1);
+  return quotes[randomIndex];
+};
+
+//Gets a random set of RGB values
+const getRandomRGB = () => {
+  let rgbValues = [];
+  for (let i = 0; i < 3; i++) {
+    rgbValues.push(getRandomNumber(0, 255));
+  }
+  return rgbValues;
 };
 
 /***
@@ -76,8 +88,11 @@ const printQuote = () => {
 
   html += `</p>`;
   document.getElementById('quote-box').innerHTML = html; 
+  document.querySelector('body').style.background = `rgb(${getRandomRGB()})`;
   return html;
 };
+
+setInterval(printQuote, 4000);
 
 /***
  * click event listener for the print quote button
