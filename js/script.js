@@ -15,28 +15,33 @@ const quotes = [
   quote: 'Yet what is any ocean but a multitude of drops?',
   source: 'David Mitchell',
   citation: 'Cloud Atlas',
-  year: 2004
+  year: 2004,
+  tags: ['Literature', 'Inspiration']
 },
 {
   quote: 'In the middle of winter I at last discovered that there was in me an invincible summer.',
   source: 'Albert Camus',
   citation: 'Return to Tipasa',
-  year: 1952
+  year: 1952,
+  tags: ['Literature', 'Inspiration']
 },
 {
   quote: "I would follow this road wherever it led me. I’d ignore all the others that crossed its path, no matter how intriguing or promising they looked. I’d finally become convinced that if I didn’t, I’d only walk an endless maze.",
   source: 'Cheryl Strayed',
   citation: 'Wild',
-  year: 2012
+  year: 2012,
+  tags: ['Memoir', 'Inspiration']
 },
 {
   quote: "An original idea. That can't be too hard. The library must be full of them.",
-  source: 'Stephen Fry'
+  source: 'Stephen Fry',
+  tags: ['Humor']
 },
 {
   quote: 'If you type Google into Google, you can break the internet.',
   source: 'Jen Barber',
-  citation: 'The I.T. Crowd'
+  citation: 'The I.T. Crowd',
+  tags: ['Humor', 'TV']
 }
 ];
 
@@ -63,6 +68,10 @@ const printQuote = () => {
 
   if (randomQuote.hasOwnProperty('year')) {
     html += `<span class="year">${randomQuote.year}</span>`;
+  }
+
+  if (randomQuote.hasOwnProperty('tags')) {
+    html += `<div class="tags">${randomQuote.tags.join(', ')}</div>`;
   }
 
   html += `</p>`;
