@@ -39,7 +39,7 @@ const quotes = [
 }
 ];
 
-// The `getRandomNumber` function returns a random number between a lower number and a higher number 
+// The `getRandomNumber` function returns a random number between a lower number and a higher number. 
 const getRandomNumber = (lower, upper) => Math.floor(Math.random() * (upper - lower + 1)) + lower;
 
 // The `getRandomQuote` function returns a random quote object from the `quotes` array.
