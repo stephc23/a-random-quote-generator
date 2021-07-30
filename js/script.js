@@ -39,7 +39,7 @@ const quotes = [
 }
 ];
 
-// The `getRandomNumber` function returns a random number between a lower number and a higher number.
+// The `getRandomNumber` function returns a random number between a lower number and a higher number 
 const getRandomNumber = (lower, upper) => Math.floor(Math.random() * (upper - lower + 1)) + lower;
 
 // The `getRandomQuote` function returns a random quote object from the `quotes` array.
@@ -77,7 +77,7 @@ const printQuote = () => {
   }
 
   html += `</p>`;
-  document.getElementById('quote-box').innerHTML = html; 
+  document.getElementById('quote-box').innerHTML = html; // code provided in project instructions
   document.querySelector('body').style.background = `rgb(${getRandomRGB()})`;
   return html;
 };
@@ -85,5 +85,5 @@ const printQuote = () => {
 // Call the `printQuote` function every 8 seconds
 setInterval(printQuote, 8000);
 
-// Call the `printQuote` function when the `Show another quote` button is clicked (code already provided)
+// Call the `printQuote` function when the `Show another quote` button is clicked (code provided in project instructions)
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
