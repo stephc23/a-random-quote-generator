@@ -77,7 +77,7 @@ const printQuote = () => {
   }
 
   html += `</p>`;
-  document.getElementById('quote-box').innerHTML = html; // code provided in project instructions
+  document.getElementById('quote-box').innerHTML = html; // Code provided in project instructions
   document.querySelector('body').style.background = `rgb(${getRandomRGB()})`;
   return html;
 };
